@@ -1,11 +1,13 @@
 var sortnumbers= require('./sortingfunctions.js');
 
-console.log(sortnumbers.sort(3));
 
-console.log(sortnumbers.sort(2));
+var sortednumbers=sortnumbers.sort;
+var savednumbers=sortnumbers.list;
 
-console.log(sortnumbers.sort(2));
+savednumbers(12);
+savednumbers(4);
+savednumbers(-2);
+savednumbers(10);
+savednumbers(-100);
 
-console.log(sortnumbers.sort(0));
-
-console.log(sortnumbers.sort(-2));
+console.log(sortednumbers());

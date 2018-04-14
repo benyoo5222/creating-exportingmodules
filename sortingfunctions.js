@@ -1,28 +1,26 @@
-function listnumbers(){
-   var listofnumbers=[];
+var list=[];
 
-   return function(numbers){
-      listofnumbers.push(numbers);
-      return listofnumbers;
-   };
+function savenumbers(input){
+   list.push(input);
 }
-var newlist=listnumbers();
 
-var sorted=function sortedlist(numbers){
 
-  var list=newlist(numbers);
+function sortedlist(){
 
+  return sortit(list);
+}
+
+function sortit(list){
 
   list.sort(function(a,b){
     return a-b;
   })
-
   return list;
-
 }
 
 module.exports={
-  sort:sorted
+  list:savenumbers,
+  sort: sortedlist
 }
 
 
